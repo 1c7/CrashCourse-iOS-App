@@ -5,7 +5,11 @@
 暂无
 
 ### 截图
-暂无
+<p align="center">
+<img src="/Screenshot/newest.jpg" width="100" />
+<img src="/Screenshot/serie.jpg" width="100" /> 
+<img src="/Screenshot/about.jpg" width="100" />
+</p>
 
 ### 本地运行
 ```
