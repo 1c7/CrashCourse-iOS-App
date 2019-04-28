@@ -21,3 +21,5 @@ pod install
 ### Tool
 * XCode 10.2.1
 * Swift 5
+* 没有线上错误跟踪
+* 没有使用情况统计
