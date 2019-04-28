@@ -24,7 +24,7 @@ class SecondViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        cc_tableView.tableFooterView = UIView()
         // 这个页面在最新和系列详情页都用到了
         if let serie_number = serie_number {
             loadSerie(serie_number)
