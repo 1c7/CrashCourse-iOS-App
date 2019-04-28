@@ -24,7 +24,7 @@ https://www.youtube.com/user/crashcourse
 
 ## Crash Course 字幕组
 * Q群: 305631757     
-* [官网:crashcourse.club](https://crashcourse.club)
+* [官网: crashcourse.club](https://crashcourse.club)
 * [微博@CrashCourse](https://www.weibo.com/u/5237129097)
 * [推特@CrashCourseCN](https://twitter.com/CrashCourseCN)
 
@@ -35,5 +35,7 @@ https://www.youtube.com/user/crashcourse
 邮件: guokrfans#gmail.com (#换成@)
 
 ### 授权
+
 <img src="/Screenshot/twitter-permission.jpg" width="750" />   
-![Twitter 地址](https://twitter.com/johngreen/status/877914133634482176)
+
+[Twitter 地址](https://twitter.com/johngreen/status/877914133634482176)
