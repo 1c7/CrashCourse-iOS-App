@@ -39,3 +39,8 @@ https://www.youtube.com/user/crashcourse
 <img src="/Screenshot/twitter-permission.jpg" width="750" />   
 
 [Twitter 地址](https://twitter.com/johngreen/status/877914133634482176)
+
+### Support Crash Course
+* 官网: [https://thecrashcourse.com](https://thecrashcourse.com)
+* Petron: [http://www.patreon.com/crashcourse](http://www.patreon.com/crashcourse)
+* 商店: [https://store.dftba.com/collections/crashcourse](https://store.dftba.com/collections/crashcourse)
