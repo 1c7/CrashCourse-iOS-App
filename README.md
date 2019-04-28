@@ -1,4 +1,5 @@
-##  速成班 iOS App - Crash Course iOS App
+##  速成课 (iOS App)
+中文字幕 Crash Course 视频集合
 
 ### 下载地址
 暂无
