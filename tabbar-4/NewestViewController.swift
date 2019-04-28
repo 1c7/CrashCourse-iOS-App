@@ -18,6 +18,7 @@ class NewestViewController: UITableViewController{
     var video_link: String? = nil // 跳转到视频详情页，显示网页时需要的链接
     var serie_number: Int? = nil // 用于显示系列详情页列表
     var page_title: String? = nil // 页面标题
+    var current_page: Int = 0 // 第几页
     
     var items: [JSON] = []
 
@@ -34,8 +35,8 @@ class NewestViewController: UITableViewController{
         setBackButton()
     }
     
+    // 设置返回按钮用"返回"中文，而不是英文"Back"
     func setBackButton(){
-        // 设置返回按钮用"返回"中文，而不是英文"Back"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: nil, action: nil)
     }
     
@@ -53,6 +54,7 @@ class NewestViewController: UITableViewController{
         setTitle()
     }
     
+    // 载入1个系列
     func loadSerie(_ serie_number: Int){
         let url = API.single_serie + String(serie_number)
         Alamofire.request(url).responseJSON { response in
@@ -60,7 +62,6 @@ class NewestViewController: UITableViewController{
                 if let json = try? JSON(data: data) {
                     if let data = json.arrayValue as [JSON]?{
                         self.items = data
-//                        print(data)
                         self.cc_tableView.reloadData()
                     }
                 }
@@ -69,17 +70,18 @@ class NewestViewController: UITableViewController{
         }
     }
     
+    // 载入"最新"
     func loadNewest(){
-        let url = API.newest
+        let url = API.newest + "?page=\(current_page)"
         Alamofire.request(url).responseJSON { response in
-            if let data = response.data{
+            if let data = response.data {
                 if let json = try? JSON(data: data) {
                     if let data = json.arrayValue as [JSON]?{
-                        self.items = data
+                        self.items = self.items + data
                         self.cc_tableView.reloadData()
+                        self.current_page = self.current_page + 1
                     }
                 }
-                
             }
         }
     }
@@ -89,7 +91,7 @@ class NewestViewController: UITableViewController{
         performSegue(withIdentifier: "toWatchSegue", sender: nil)
     }
     
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toWatchSegue" {
             if let viewController = segue.destination as? WebViewController {
                 if let link = video_link {
@@ -97,11 +99,14 @@ class NewestViewController: UITableViewController{
                 }
             }
         }
-     }
-
+    }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastElement = items.count - 1
+        if indexPath.row == lastElement {
+            print("载入下一页")
+            loadNewest()
+        }
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -122,6 +127,7 @@ class NewestViewController: UITableViewController{
     }
     
     // 高 112
+    // 这样左侧的图片比例是对的
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 112.0
     }
