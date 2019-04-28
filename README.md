@@ -1,10 +1,21 @@
-##  速成课 (Crash Course) - 字幕组做的 iOS App
-中文字幕 Crash Course 视频集合
+##  速成课
+Crash Course 字幕组做的 iOS App
 
-### 下载地址
+### 这是什么?
+一个 iOS App
+
+### 打开里面有什么? 用处是什么?
+打开里面有什么？: 最新的 Crash Course 中文字幕视频
+用处是什么? : 方便看
+
+### Crash Course 是什么?
+一个 Youtube 频道，制作高质量的教育类视频:   
+https://www.youtube.com/user/crashcourse
+
+## App 下载地址
 暂无
 
-### 截图
+## 截图
 <p align="left">
 <img src="/Screenshot/newest.jpg" width="250" />
 <img src="/Screenshot/serie.jpg" width="250" /> 
