@@ -9,10 +9,9 @@
 import UIKit
 
 class SerieCollectionViewCell: UICollectionViewCell {
-    
     @IBOutlet weak var name: UILabel! // 系列名
     @IBOutlet weak var englishName: UILabel! // 系列英文名
-    @IBOutlet weak var desc: UILabel!
-    @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var view: UIView!
+    @IBOutlet weak var desc: UILabel! // 描述
+    @IBOutlet weak var backgroundImage: UIImageView! // 背景图片
+    @IBOutlet weak var view: UIView! // 盖上黑色的一层
 }

@@ -12,20 +12,39 @@ import SwiftyJSON
 import AlamofireObjectMapper
 import Kingfisher
 
+// 最新 / 系列详情页
 class SecondViewController: UITableViewController{
     
     @IBOutlet var cc_tableView: UITableView!
     var video_link: String? = nil // 跳转到视频详情页，显示网页时需要的链接
     var serie_number: Int? = nil // 用于显示系列详情页列表
+    var page_title: String? = nil // 页面标题
     
     var items: [JSON] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 这个页面在最新和系列详情页都用到了
         if let serie_number = serie_number {
             loadSerie(serie_number)
         } else {
             loadNewest()
+        }
+        
+        setBackButton()
+        setTitle()
+    }
+    
+    func setBackButton(){
+        // 设置返回按钮用"返回"中文，而不是英文"Back"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: nil, action: nil)
+    }
+    
+    // 如果有"系列"的标题，就设置 title
+    func setTitle(){
+        if let title = page_title {
+            self.title = title
         }
     }
     
@@ -52,7 +71,6 @@ class SecondViewController: UITableViewController{
                 if let json = try? JSON(data: data) {
                     if let data = json.arrayValue as [JSON]?{
                         self.items = data
-//                        print(data)
                         self.cc_tableView.reloadData()
                     }
                 }
@@ -69,7 +87,7 @@ class SecondViewController: UITableViewController{
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toWatchSegue" {
             if let viewController = segue.destination as? WebViewController {
-                if let link = video_link{
+                if let link = video_link {
                     viewController.webview_link = link
                 }
             }

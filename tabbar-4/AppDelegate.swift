@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  tabbar-4
 //
-//  Created by remote_edit on 2019/4/22.
+//  Created by @糖醋陈皮 on 2019/4/22.
 //  Copyright © 2019 1c7. All rights reserved.
 //
 

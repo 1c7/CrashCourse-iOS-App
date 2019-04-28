@@ -1,8 +1,7 @@
 //
 //  FirstViewController.swift
-//  tabbar-4
 //
-//  Created by remote_edit on 2019/4/22.
+//  Created by @糖醋陈皮 on 2019/4/22.
 //  Copyright © 2019 1c7. All rights reserved.
 //
 
@@ -12,10 +11,12 @@ import SwiftyJSON
 import AlamofireObjectMapper
 import Kingfisher
 
+// 系列
 class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     var items: [JSON] = []
     var selected_serie_number: Int? = nil
+    var selected_serie_title: String? = nil
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -28,19 +29,18 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let item = items[indexPath.row]
         selected_serie_number = item["id"].int
+        selected_serie_title = item["title"].string
         performSegue(withIdentifier: "toSerieDetail", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSerieDetail" {
             if let viewController = segue.destination as? SecondViewController {
-                if let num = selected_serie_number{
-                    viewController.serie_number = num
-                }
+                    viewController.serie_number = selected_serie_number
+                    viewController.page_title = selected_serie_title
             }
         }
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
@@ -58,12 +58,13 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         cell.layer.borderWidth = 1
         cell.layer.masksToBounds = true
-        let borderColor: UIColor =  .white
+        let borderColor: UIColor =  UIColor(red: 64.0, green: 67.0, blue: 70.0, alpha: 1.0)
         cell.layer.borderColor = borderColor.cgColor
         
         return cell
     }
     
+    // 2 column
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = (self.view.frame.size.width) / 2
         return CGSize(width: width, height: width-20)
@@ -81,6 +82,10 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 设置返回按钮用"返回"中文，而不是英文"Back"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: nil, action: nil)
+        
         Alamofire.request(API.serie).responseJSON { response in
             if let data = response.data{
                 if let json = try? JSON(data: data) {
