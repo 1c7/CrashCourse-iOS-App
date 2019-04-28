@@ -13,7 +13,7 @@ import AlamofireObjectMapper
 import Kingfisher
 
 // 最新 / 系列详情页
-class SecondViewController: UITableViewController{
+class NewestViewController: UITableViewController{
     
     @IBOutlet var cc_tableView: UITableView!
     var video_link: String? = nil // 跳转到视频详情页，显示网页时需要的链接
@@ -41,10 +41,13 @@ class SecondViewController: UITableViewController{
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: nil, action: nil)
     }
     
-    // 如果有"系列"的标题，就设置 title
+    // 如果有标题就设置标题
+    // 没有标题就隐藏顶部
     func setTitle(){
         if let title = page_title {
             self.title = title
+        }else{
+            self.navigationController!.navigationBar.isHidden = true
         }
     }
     

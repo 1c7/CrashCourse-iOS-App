@@ -12,7 +12,7 @@ import AlamofireObjectMapper
 import Kingfisher
 
 // 系列
-class FirstViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+class SerieViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     var items: [JSON] = []
     var selected_serie_number: Int? = nil
@@ -35,7 +35,7 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSerieDetail" {
-            if let viewController = segue.destination as? SecondViewController {
+            if let viewController = segue.destination as? NewestViewController {
                     viewController.serie_number = selected_serie_number
                     viewController.page_title = selected_serie_title
             }
@@ -82,6 +82,8 @@ class FirstViewController: UIViewController, UICollectionViewDataSource, UIColle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController!.navigationBar.isHidden = true
         
         // 设置返回按钮用"返回"中文，而不是英文"Back"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: nil, action: nil)

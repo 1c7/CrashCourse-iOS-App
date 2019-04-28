@@ -10,8 +10,8 @@
 		3601A958226F2BB600189DA8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601A957226F2BB600189DA8 /* WebViewController.swift */; };
 		3644E5762275A2EE0075A9EF /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3644E5752275A2EE0075A9EF /* LaunchScreen.png */; };
 		367C6EE7226CCFC200F57003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EE6226CCFC200F57003 /* AppDelegate.swift */; };
-		367C6EE9226CCFC200F57003 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EE8226CCFC200F57003 /* FirstViewController.swift */; };
-		367C6EEB226CCFC200F57003 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EEA226CCFC200F57003 /* SecondViewController.swift */; };
+		367C6EE9226CCFC200F57003 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EE8226CCFC200F57003 /* SerieViewController.swift */; };
+		367C6EEB226CCFC200F57003 /* NewestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EEA226CCFC200F57003 /* NewestViewController.swift */; };
 		367C6EEE226CCFC200F57003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367C6EEC226CCFC200F57003 /* Main.storyboard */; };
 		367C6EF0226CCFC300F57003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 367C6EEF226CCFC300F57003 /* Assets.xcassets */; };
 		367C6EF3226CCFC300F57003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 367C6EF1226CCFC300F57003 /* LaunchScreen.storyboard */; };
@@ -26,8 +26,8 @@
 		3644E5752275A2EE0075A9EF /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
 		367C6EE3226CCFC200F57003 /* tabbar-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabbar-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		367C6EE6226CCFC200F57003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		367C6EE8226CCFC200F57003 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		367C6EEA226CCFC200F57003 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		367C6EE8226CCFC200F57003 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
+		367C6EEA226CCFC200F57003 /* NewestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewestViewController.swift; sourceTree = "<group>"; };
 		367C6EED226CCFC200F57003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		367C6EEF226CCFC300F57003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		367C6EF2226CCFC300F57003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -82,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				367C6EE6226CCFC200F57003 /* AppDelegate.swift */,
-				367C6EE8226CCFC200F57003 /* FirstViewController.swift */,
+				367C6EE8226CCFC200F57003 /* SerieViewController.swift */,
 				367C6EFA226CD1C000F57003 /* API.swift */,
-				367C6EEA226CCFC200F57003 /* SecondViewController.swift */,
+				367C6EEA226CCFC200F57003 /* NewestViewController.swift */,
 				367C6EEC226CCFC200F57003 /* Main.storyboard */,
 				3601A957226F2BB600189DA8 /* WebViewController.swift */,
 				367C6EFE226DABC000F57003 /* NewestTableViewCell.swift */,
@@ -235,10 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				367C6EEB226CCFC200F57003 /* SecondViewController.swift in Sources */,
+				367C6EEB226CCFC200F57003 /* NewestViewController.swift in Sources */,
 				367C6EE7226CCFC200F57003 /* AppDelegate.swift in Sources */,
 				367C6EFB226CD1C000F57003 /* API.swift in Sources */,
-				367C6EE9226CCFC200F57003 /* FirstViewController.swift in Sources */,
+				367C6EE9226CCFC200F57003 /* SerieViewController.swift in Sources */,
 				367C6EFD226CD67800F57003 /* SerieCollectionViewCell.swift in Sources */,
 				367C6EFF226DABC000F57003 /* NewestTableViewCell.swift in Sources */,
 				3601A958226F2BB600189DA8 /* WebViewController.swift in Sources */,
@@ -388,8 +388,9 @@
 			baseConfigurationReference = 78CBDF7E914D0748C5D23245 /* Pods-tabbar-4.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RVC55W57L;
 				INFOPLIST_FILE = "tabbar-4/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -408,8 +409,9 @@
 			baseConfigurationReference = AC349AE562A2C561577A42CF /* Pods-tabbar-4.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5RVC55W57L;
 				INFOPLIST_FILE = "tabbar-4/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Serie View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="tabbar_4" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="SerieViewController" customModule="tabbar_4" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +101,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yD9-KI-fDB"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="yD9-KI-fDB"/>
                     <connections>
                         <outlet property="collectionView" destination="b2u-pH-RyG" id="KsB-35-gen"/>
                         <segue destination="vAX-3j-d01" kind="show" identifier="toSerieDetail" id="Snn-ex-ImQ"/>
@@ -130,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="-26" y="-1"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Newest View Controller-->
         <scene sceneID="u4V-CS-2Xb">
             <objects>
-                <tableViewController id="vAX-3j-d01" customClass="SecondViewController" customModule="tabbar_4" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vAX-3j-d01" customClass="NewestViewController" customModule="tabbar_4" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xdC-zK-ybC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,7 +254,7 @@
         <scene sceneID="O8g-yG-FUd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mnD-L2-xtX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="系列" selectedImage="grid" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="系列" image="系列" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g64-lt-Vv4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -273,7 +273,7 @@
         <scene sceneID="KCS-jb-k6v">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="haz-of-Lkh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="最新" selectedImage="second" id="gYG-W7-kWC"/>
+                    <tabBarItem key="tabBarItem" title="最新" image="最新" id="gYG-W7-kWC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x0H-KK-hGh">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -368,7 +368,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="o6C-Jy-YPB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="关于" id="2u2-Hu-EKt"/>
+                    <tabBarItem key="tabBarItem" title="关于" image="关于" id="2u2-Hu-EKt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6oe-29-bDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,9 +376,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="grid" width="100" height="100"/>
         <image name="permission2" width="1278" height="864"/>
-        <image name="second" width="30" height="30"/>
+        <image name="关于" width="25" height="25"/>
+        <image name="最新" width="19" height="17"/>
+        <image name="系列" width="17" height="17"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="neh-Ss-Ot2"/>
