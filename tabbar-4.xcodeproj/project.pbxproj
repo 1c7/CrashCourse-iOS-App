@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3601A958226F2BB600189DA8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3601A957226F2BB600189DA8 /* WebViewController.swift */; };
 		3644E5762275A2EE0075A9EF /* LaunchScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3644E5752275A2EE0075A9EF /* LaunchScreen.png */; };
+		3644E57A2275EC680075A9EF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3644E5792275EC680075A9EF /* WebKit.framework */; };
 		367C6EE7226CCFC200F57003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EE6226CCFC200F57003 /* AppDelegate.swift */; };
 		367C6EE9226CCFC200F57003 /* SerieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EE8226CCFC200F57003 /* SerieViewController.swift */; };
 		367C6EEB226CCFC200F57003 /* NewestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367C6EEA226CCFC200F57003 /* NewestViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		3601A957226F2BB600189DA8 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		3644E5752275A2EE0075A9EF /* LaunchScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchScreen.png; sourceTree = "<group>"; };
+		3644E5792275EC680075A9EF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		367C6EE3226CCFC200F57003 /* tabbar-4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tabbar-4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		367C6EE6226CCFC200F57003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		367C6EE8226CCFC200F57003 /* SerieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerieViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3644E57A2275EC680075A9EF /* WebKit.framework in Frameworks */,
 				ACD09F8862B1A8248C89CED5 /* Pods_tabbar_4.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +58,7 @@
 		2CFC135293FF30A1022A59C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3644E5792275EC680075A9EF /* WebKit.framework */,
 				CEB0E4F72C91ABF56085F4C6 /* Pods_tabbar_4.framework */,
 			);
 			name = Frameworks;

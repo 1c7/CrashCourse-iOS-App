@@ -32,7 +32,6 @@ class NewestViewController: UITableViewController{
         }
         
         setBackButton()
-        setTitle()
     }
     
     func setBackButton(){
@@ -40,14 +39,18 @@ class NewestViewController: UITableViewController{
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: nil, action: nil)
     }
     
-    // 如果有标题就设置标题
-    // 没有标题就隐藏顶部
+    // 有标题就设置标题
     func setTitle(){
         if let title = page_title {
             self.title = title
-        }else{
-            self.navigationController!.navigationBar.isHidden = true
+            self.navigationController!.navigationBar.isHidden = false
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.navigationBar.isHidden = true
+        setTitle()
     }
     
     func loadSerie(_ serie_number: Int){

@@ -18,6 +18,7 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         setWebView()
         setTopRightItem()
+        self.navigationController!.navigationBar.isHidden = false
     }
     
     // 设置网址
