@@ -1,5 +1,9 @@
 ## 开发者必读
 
+### 工具&语言
+* XCode 10.2.1
+* Swift 5
+
 ### 本地运行
 ```
 git clone https://github.com/1c7/crash-course-ios-app.git
@@ -11,8 +15,5 @@ pod install
 
 ### 时间
 * 开始时间: 2019年4月
-* 1.0 版: ~2019年4月28号
-
-### 工具&语言
-* XCode 10.2.1
-* Swift 5
+* 1.0版开发完成: 2019年4月28号
+* 1.0版提交 App Store 审核: 2019年4月29号
