@@ -14,8 +14,9 @@ https://www.youtube.com/user/crashcourse
 ### 说明
 * 开发这个 iOS App 的目的是：方便苹果手机用户看字幕组翻译的 Crash Course 视频。   
 * 安卓手机用户可以装酷安上的 [CC速成班](https://www.coolapk.com/apk/com.crashcourse.china.c17)
-* 非手机用户或者纯粹是不想装 App，可以看 [官网 crashcourse.club](https://crashcourse.club)
-这3个地方的内容是完全一样的，就只是跳转到B站看翻译好的有字幕的视频而已。    
+* 非手机用户或者纯粹是不想装 App，可以看 [官网 crashcourse.club](https://crashcourse.club)   
+
+**iOS/Android/网站 3个地方的内容是完全一样的，就只是跳转到B站看翻译好的有字幕的视频而已**
 
 ## App Store 下载地址
 暂无 (上架中)
