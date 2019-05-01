@@ -28,37 +28,31 @@
 Guideline 4.2.2 - Design - Minimum Functionality
 
 
-We noticed that your app only includes links, images,
-or content aggregated from the Internet with limited 
-or no native iOS functionality. Although this content 
-may be curated from the web specifically for your users,
-since it does not sufficiently differ from a mobile web 
-browsing experience, it is not appropriate for the App Store.
+We noticed that your app only includes links, images, or content aggregated from the 
+Internet with limited  or no native iOS functionality. Although this content may be 
+curated from the web specifically for your users,since it does not sufficiently differ 
+from a mobile web  browsing experience, it is not appropriate for the App Store.
 
 Next Steps
 
-We encourage you to review your app concept 
-and work towards creating an app that offers 
-customers an engaging and lasting experience that 
-also meets the App Store’s high expectations 
+We encourage you to review your app concept and work towards creating an app that offers 
+customers an engaging and lasting experience that also meets the App Store’s high expectations 
 for quality and functionality.
 
-Apple Developer includes a variety of design and
-development resources. Download iOS templates from
-Apple UI Design Resources, learn more about crafting intuitive, 
-well-designed apps with the Design Video collection, 
-and review the iOS Human Interface Guidelines for 
+Apple Developer includes a variety of design and development resources. 
+Download iOS templates from Apple UI Design Resources, learn more about crafting intuitive, 
+well-designed apps with the Design Video collection, and review the iOS Human Interface Guidelines for 
 best practices to follow when designing apps for the App Store.
 ```
-简单说就是苹果爸爸是对的。   
+简单说就是苹果是对的    
 
 > Although this content may be curated from the web specifically for your users
 
-虽然是你网上自己精选的内容
+虽然是精选的内容
 
 > since it does not sufficiently differ from a mobile web browsing experience, it is not appropriate for the App Store.
 
-但是和用浏览器没啥区别啊。所以不适合 App Store
+但和网站没有区别。不适合 App Store
 
 下一步建议是
 
@@ -73,8 +67,9 @@ best practices to follow when designing apps for the App Store.
 1. 字幕组的视频都在 B 站
 2. 这个 App 的重点就是看翻译过的视频
 3. 如果不用浏览器而是内置播放器。
-  一、B站没有提供这样的 API，要自己破解，试过，没成功。
-  二、App 里面内置播放器的话还得写一些代码，我没那么多时间
+
+    一、B站没有提供这样的 API，要自己破解，试过，没成功。
+    二、App 里面内置播放器的话还得写一些代码，我没那么多时间
 
 如果有想法可以开 Github Issue 讨论
 
@@ -104,8 +99,6 @@ https://www.youtube.com/user/crashcourse
 * 官网: [https://thecrashcourse.com](https://thecrashcourse.com)
 * Petron: [http://www.patreon.com/crashcourse](http://www.patreon.com/crashcourse)
 * 商店: [https://store.dftba.com/collections/crashcourse](https://store.dftba.com/collections/crashcourse)
-
-
 -->
 
 ### 授权
